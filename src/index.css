@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #17181a;
+  --color-paper: #f1efea;
+  --color-paper-dim: #e7e2d9;
+  --color-maroon: #7c1f2a;
+  --color-maroon-deep: #4f1119;
+  --color-maroon-bright: #9c2833;
+  --color-steel: #52565c;
+  --color-steel-line: #d7d1c6;
+  --color-graphite: #1c1b19;
+  --color-graphite-2: #26241f;
+  --color-metal: #b7bdc3;
+
+  --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-data: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.font-data-num {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background-color: var(--color-maroon);
+  color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-maroon);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.rule-line {
+  height: 1px;
+  background-color: var(--color-steel-line);
+}
+
+.bracket-frame {
+  position: relative;
+}
+.bracket-frame::before,
+.bracket-frame::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: var(--color-maroon-bright);
+  z-index: 10;
+  pointer-events: none;
+}
+.bracket-frame::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.bracket-frame::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
