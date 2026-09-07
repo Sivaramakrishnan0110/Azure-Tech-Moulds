@@ -78,7 +78,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="relative flex flex-col gap-5 overflow-hidden">
-      <Logo className="pointer-events-none absolute -right-16 bottom-0 z-0 w-72 opacity-[0.045]" />
+      <Logo className="pointer-events-none absolute left-1/2 top-1/2 z-0 w-96 max-w-[95%] -translate-x-1/2 -translate-y-1/2 opacity-[0.045]" />
       <div className="relative z-10 grid sm:grid-cols-2 gap-5">
         <Field
           label="Full Name"
