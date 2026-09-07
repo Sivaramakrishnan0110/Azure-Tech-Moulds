@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
-import logo from "../assets/brand/logo.jpg";
+import Logo from "./Logo";
 import { company } from "../data/company";
 import { services } from "../data/services";
 
@@ -34,7 +34,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="flex h-20 items-center justify-between gap-6">
           <Link to="/" className="flex items-center gap-3 shrink-0" aria-label="Azure Tech Moulds home">
-            <img src={logo} alt="Azure Tech Moulds logo" className="h-11 w-auto" />
+            <Logo alt="Azure Tech Moulds logo" className="h-11 w-14" />
             <span className="hidden sm:flex flex-col leading-none">
               <span className="font-display font-bold text-[17px] tracking-tight text-ink">
                 AZURE TECH MOULDS

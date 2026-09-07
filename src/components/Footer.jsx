@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logo from "../assets/brand/logo.jpg";
+import Logo from "./Logo";
 import { company } from "../data/company";
 import { services } from "../data/services";
 
@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-3 mb-4">
-            <img src={logo} alt="Azure Tech Moulds logo" className="h-10 w-auto bg-white p-1" />
+            <Logo alt="Azure Tech Moulds logo" className="h-16 w-20 shrink-0" />
             <span className="font-display font-bold text-white tracking-tight">
               AZURE TECH MOULDS
             </span>

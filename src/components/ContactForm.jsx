@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckCircle2 } from "lucide-react";
+import Logo from "./Logo";
 import { company } from "../data/company";
 import { services } from "../data/services";
 
@@ -76,8 +77,9 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
-      <div className="grid sm:grid-cols-2 gap-5">
+    <form onSubmit={handleSubmit} noValidate className="relative flex flex-col gap-5 overflow-hidden">
+      <Logo className="pointer-events-none absolute -right-16 bottom-0 z-0 w-72 opacity-[0.045]" />
+      <div className="relative z-10 grid sm:grid-cols-2 gap-5">
         <Field
           label="Full Name"
           name="name"
@@ -97,7 +99,7 @@ export default function ContactForm() {
           required
         />
       </div>
-      <div className="grid sm:grid-cols-2 gap-5">
+      <div className="relative z-10 grid sm:grid-cols-2 gap-5">
         <Field
           label="Email"
           name="email"
@@ -117,7 +119,7 @@ export default function ContactForm() {
         />
       </div>
 
-      <label className="flex flex-col gap-1.5">
+      <label className="relative z-10 flex flex-col gap-1.5">
         <span className="text-sm font-medium text-ink">Service or Product</span>
         <select
           name="interest"
@@ -135,7 +137,7 @@ export default function ContactForm() {
         </select>
       </label>
 
-      <label className="flex flex-col gap-1.5">
+      <label className="relative z-10 flex flex-col gap-1.5">
         <span className="text-sm font-medium text-ink">
           Message <span className="text-maroon">*</span>
         </span>
@@ -154,7 +156,7 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        className="bg-maroon hover:bg-maroon-deep transition-colors text-white font-semibold px-7 py-4 w-fit"
+        className="relative z-10 bg-maroon hover:bg-maroon-deep transition-colors text-white font-semibold px-7 py-4 w-fit"
       >
         Send Enquiry
       </button>
