@@ -66,24 +66,27 @@ export default function Gallery() {
 
       <section className="pb-20 sm:pb-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {visibleItems.map((item) => (
-              <button
-                key={item.image}
-                onClick={() => openAt(item)}
-                className="group relative overflow-hidden border border-steel-line text-left"
-              >
-                <img
-                  src={item.image}
-                  alt={item.caption}
-                  loading="lazy"
-                  className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <span className="absolute inset-x-0 bottom-0 bg-graphite/85 text-white text-[13px] px-4 py-2.5">
-                  {item.caption}
-                </span>
-              </button>
-            ))}
+          <div className="overflow-x-auto pb-3">
+            <div className="flex min-w-max gap-5 snap-x snap-mandatory">
+              {visibleItems.map((item) => (
+                <button
+                  key={item.image}
+                  onClick={() => openAt(item)}
+                  className="group relative overflow-hidden border border-steel-line text-left snap-start shrink-0"
+                  style={{ width: "min(82vw, 320px)" }}
+                >
+                  <img
+                    src={item.image}
+                    alt={item.caption}
+                    loading="lazy"
+                    className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute inset-x-0 bottom-0 bg-graphite/85 text-white text-[13px] px-4 py-2.5">
+                    {item.caption}
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>

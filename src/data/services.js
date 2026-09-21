@@ -1,8 +1,10 @@
+import jyotiDx250 from "../assets/machines/jyoti-dx200.jpg";
 import turningGraphic from "../assets/services/turning-graphic.jpg";
 import edmGraphic from "../assets/services/edm-graphic.jpg";
 import fourthAxisGraphic from "../assets/services/4th-axis-graphic.jpg";
 import diecastingGraphic from "../assets/services/diecasting-graphic.jpg";
 import patternPlateMachining from "../assets/services/pattern-plate-machining.jpg";
+import sandCastingMould from "../assets/services/process38.png";
 import subAssemblyGraphic from "../assets/services/sub-assembly-graphic.jpg";
 import toolAssemblyGraphic from "../assets/services/tool-assembly-graphic.jpg";
 import pressToolFabGraphic from "../assets/services/press-tool-fab-graphic.jpg";
@@ -17,7 +19,7 @@ export const services = [
     seoTitle: "Precision Machined Parts | CNC Turning, EDM & 4th Axis",
     metaDescription:
       "Precision machined parts using CNC turning, EDM sparking and 4th axis rotary machining for automotive, tooling and industrial components.",
-    heroImage: turningGraphic,
+    heroImage: jyotiDx250,
     summary:
       "CNC turning, CNC EDM sparking and 4th axis rotary machining for components across automotive, tooling and industrial applications.",
     intro: [
@@ -39,8 +41,8 @@ export const services = [
     sections: [
       {
         heading: "CNC Turning \u2013 Precision Cylindrical Machining",
-        body: "Our CNC turning is suited to cylindrical and rotationally symmetric metal components. The Jyoti DX 200 CNC Turning Center provides a maximum turning diameter of \u00d8365 mm and spindle speeds up to 4000 RPM \u2013 suitable for components that need consistent dimensions and repeatable machining across shafts, bushings, flanges, pins, sleeves and other rotationally symmetric parts.",
-        image: turningGraphic,
+        body: "Our CNC turning is suited to cylindrical and rotationally symmetric metal components. The Jyoti DX 250 CNC Turning Center provides a maximum turning diameter of \u00d8365 mm and spindle speeds up to 4000 RPM \u2013 suitable for components that need consistent dimensions and repeatable machining across shafts, bushings, flanges, pins, sleeves and other rotationally symmetric parts.",
+        image: jyotiDx250,
       },
       {
         heading: "CNC Sparking & EDM \u2013 Precision Cavity Sinking",
@@ -73,7 +75,7 @@ export const services = [
       },
       {
         q: "What is the maximum turning diameter of your CNC turning centre?",
-        a: "The Jyoti DX 200 CNC Turning Center supports a maximum turning diameter of \u00d8365 mm with spindle speeds up to 4000 RPM.",
+        a: "The Jyoti DX 250 CNC Turning Center supports a maximum turning diameter of \u00d8365 mm with spindle speeds up to 4000 RPM.",
       },
       {
         q: "What is cavity sinking EDM?",
@@ -93,17 +95,17 @@ export const services = [
     shortName: "Mould & Dies",
     seoTitle: "Mould and Die Manufacturing Services | Precision Tooling",
     metaDescription:
-      "Mould and die manufacturing services for aluminium die casting, automotive components, industrial parts and precision foundry pattern plates.",
+      "Mould and die manufacturing services for GDC aluminium die casting, automotive components, industrial parts and precision foundry pattern plates.",
     heroImage: diecastingGraphic,
     summary:
-      "Custom moulds, dies, aluminium die casting tooling and foundry pattern plates for automotive, industrial and casting applications.",
+      "Custom moulds, dies, GDC aluminium die casting tooling and foundry pattern plates for automotive, industrial and casting applications.",
     intro: [
       "Mould and die manufacturing plays an important role in producing accurate, repeatable and durable metal components for automotive, industrial, electrical, electronic and foundry applications. Our mould and die manufacturing is built around specific component geometry, production requirements and casting applications.",
-      "We manufacture custom moulds, dies, aluminium die casting moulds and pattern plates with a focus on dimensional accuracy, repeatability, durability and reliable production performance.",
+      "We manufacture custom moulds, dies, GDC aluminium die casting moulds and pattern plates with a focus on dimensional accuracy, repeatability, durability and reliable production performance.",
     ],
     capabilities: [
       "Custom mould and die manufacturing",
-      "Aluminium die casting mould and die manufacturing",
+      "GDC aluminium die casting mould and die manufacturing",
       "Pattern plate manufacturing",
       "Foundry pattern plate manufacturing",
       "Match plate pattern manufacturing",
@@ -114,8 +116,8 @@ export const services = [
     ],
     sections: [
       {
-        heading: "Aluminium Die Casting Mould & Die",
-        body: "Aluminium die casting moulds and dies produce metal components with consistent shapes, dimensions and surface characteristics \u2013 particularly suited to high-volume production where repeatability and mould durability matter. Applications include automotive engine and transmission components, industrial machinery housings, structural metal components, and electrical or electronic enclosures.",
+        heading: "GDC Aluminium Die Casting",
+        body: "GDC aluminium die casting moulds and dies produce metal components with consistent shapes, dimensions and surface characteristics – particularly suited to high-volume production where repeatability and mould durability matter. Applications include automotive engine and transmission components, industrial machinery housings, structural metal components, and electrical or electronic enclosures.",
         image: diecastingGraphic,
       },
       {
@@ -123,9 +125,14 @@ export const services = [
         body: "Pattern plates are tooling components used in foundry and sand casting to create accurate mould cavities and improve repeatability during casting production. We manufacture precision pattern plates for sand casting, green sand moulding, shell moulding and match plate moulding, across both ferrous and non-ferrous metals.",
         image: patternPlateMachining,
       },
+      {
+        heading: "Sand Casting Mould and Core Box",
+        body: "Specialized fabrication of sand casting moulds and core boxes engineered to produce accurate cavities and internal geometries for diverse foundry casting requirements.",
+        image: sandCastingMould,
+      },
     ],
     mouldTypesIntro:
-      "Alongside custom aluminium die casting tooling, our facility also builds pattern plates and press tool sets \u2013 the reference types below outline the tooling forms we work with.",
+      "Alongside custom GDC aluminium die casting tooling, our facility also builds pattern plates and press tool sets – the reference types below outline the tooling forms we work with.",
     process: [
       "Requirement Review \u2013 component requirements, application, production volume and tooling needs are reviewed before manufacturing begins.",
       "Tooling Design \u2013 the mould, die or pattern plate is designed to the component geometry and manufacturing process.",
@@ -140,7 +147,7 @@ export const services = [
         a: "The process of designing and producing specialised tooling used to shape and form components during manufacturing and casting, built to the required component geometry and production method.",
       },
       {
-        q: "What is an aluminium die casting mould?",
+        q: "What is a GDC aluminium die casting mould?",
         a: "Specialised tooling used to produce aluminium components through the die casting process, designed to create the required shape and support repeatable production.",
       },
       {
@@ -152,7 +159,7 @@ export const services = [
         a: "A pattern plate is used in foundry and moulding applications to create the required mould cavity for casting, improving repeatability and consistency during mould preparation.",
       },
     ],
-    cta: "Contact us to discuss your component design, aluminium die casting tooling or pattern plate requirements.",
+    cta: "Contact us to discuss your component design, GDC aluminium die casting tooling or pattern plate requirements.",
   },
   {
     id: "mechanical-assembly",

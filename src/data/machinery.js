@@ -4,6 +4,7 @@ import vl1300 from "../assets/machines/stm-vl1300.jpg";
 import cvm12k from "../assets/machines/cosmos-cvm800-12k.jpg";
 import vl850 from "../assets/machines/stm-vl850.jpg";
 import jyoti from "../assets/machines/jyoti-dx200.jpg";
+import stmVl1200 from "../assets/machines/stm-vl1200.jpg";
 import ratna from "../assets/machines/ratna-edm-7045.jpg";
 
 export const vmcMachines = [
@@ -88,7 +89,7 @@ export const turningMachine = {
   id: "jyoti-dx200",
   category: "CNC Turning",
   series: "Die Mould Series",
-  name: "Jyoti DX 200",
+  name: "Jyoti DX 250",
   image: jyoti,
   specs: [
     { label: "Maximum Turning Dia", value: "\u00d8 365 mm" },
@@ -112,6 +113,22 @@ export const edmMachine = {
     { label: "Spindle RPM", value: "Max 12000 RPM" },
     { label: "Max Load", value: "800 Kgs" },
     { label: "Tank Dimensions", value: "X = 1100 mm, Y = 700 mm, Z = 400 mm" },
+  ],
+};
+
+export const verticalLatheMachine = {
+  id: "stm-vl1200",
+  category: "Vertical CNC Lathe",
+  series: "Heavy Duty Series",
+  name: "STM VL1200 – Vertical Lathe",
+  image: stmVl1200,
+  specs: [
+    { label: "Service Overview", value: "Heavy-duty vertical turning and precision machining for large-diameter components." },
+    { label: "Table Size", value: "1200 mm" },
+    { label: "Turning Diameter", value: "Up to 1200 mm" },
+    { label: "Spindle Speed", value: "Up to 800 RPM" },
+    { label: "Load Capacity", value: "Up to 5000 kg" },
+    { label: "Application", value: "Heavy-duty turning, facing, boring, and precision machining" },
   ],
 };
 
@@ -147,4 +164,5 @@ export const allPrecisionMachines = [
   ...vmcMachines,
   turningMachine,
   edmMachine,
+  verticalLatheMachine,
 ];

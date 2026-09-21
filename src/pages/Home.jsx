@@ -12,7 +12,7 @@ import ServiceCard from "../components/ServiceCard";
 import StatBand from "../components/StatBand";
 import TargetClients from "../components/TargetClients";
 import CTA from "../components/CTA";
-import heroInstall from "../assets/brand/hero-install.jpg";
+import homeHero from "../assets/brand/home-hero.jpeg";
 import factoryExterior from "../assets/company/factory-exterior.jpg";
 import { company } from "../data/company";
 import { services } from "../data/services";
@@ -55,8 +55,8 @@ export default function Home() {
       <section className="relative bg-graphite">
         <div className="relative h-[78vh] min-h-[560px] max-h-[820px] overflow-hidden">
           <img
-            src={heroInstall}
-            alt="STM vertical machining centre installed on the Azure Tech Moulds shop floor"
+            src={homeHero}
+            alt="STM VL1200 vertical machining centre"
             className="absolute inset-0 h-full w-full object-cover object-[60%_35%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-graphite via-graphite/40 to-graphite/10" />

@@ -116,62 +116,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Certifications */}
-      <section className="py-16 sm:py-24 bg-paper-dim">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <SectionTitle
-            title="Certifications"
-            description="Quality and industry credentials on record for the facility."
-          />
-          <div className="mt-10 grid md:grid-cols-2 gap-8">
-            {certifications.map((cert) => (
-              <div key={cert.id} className="border border-steel-line bg-white flex flex-col sm:flex-row">
-                <img
-                  src={cert.image}
-                  alt={cert.name}
-                  className="sm:w-48 h-56 sm:h-auto w-full object-cover object-top shrink-0"
-                  loading="lazy"
-                />
-                <div className="p-6 flex flex-col gap-2.5">
-                  <h3 className="font-display font-bold text-lg text-ink">{cert.name}</h3>
-                  <p className="text-[13.5px] text-steel">{cert.issuer}</p>
-                  <p className="text-[13.5px] text-steel">{cert.scope}</p>
-                  <dl className="text-[13px] text-steel mt-1 grid grid-cols-2 gap-x-4 gap-y-1 font-data-num">
-                    {cert.certificateNumber && (
-                      <>
-                        <dt className="text-ink/60">Certificate No.</dt>
-                        <dd>{cert.certificateNumber}</dd>
-                      </>
-                    )}
-                    {cert.membershipNumber && (
-                      <>
-                        <dt className="text-ink/60">Membership No.</dt>
-                        <dd>{cert.membershipNumber}</dd>
-                      </>
-                    )}
-                    {cert.validity && (
-                      <>
-                        <dt className="text-ink/60">Validity</dt>
-                        <dd>{cert.validity}</dd>
-                      </>
-                    )}
-                    {cert.dateOfExpiry && (
-                      <>
-                        <dt className="text-ink/60">Valid Until</dt>
-                        <dd>{cert.dateOfExpiry}</dd>
-                      </>
-                    )}
-                  </dl>
-                  <p className="text-[12.5px] text-steel/80 italic mt-2 leading-relaxed">
-                    {cert.note}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <CTA
         title="Want to see the floor before you commit?"
         description="We're happy to walk you through our process, machinery and quality records."

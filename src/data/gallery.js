@@ -39,7 +39,7 @@ export const galleryCategories = [
       { image: vl1300, caption: "STM VL1300 vertical machining centre" },
       { image: cvm12k, caption: "Cosmos CVM 800 (12000 RPM) vertical machining centre" },
       { image: vl850, caption: "STM VL 850 vertical machining centre" },
-      { image: jyoti, caption: "Jyoti DX 200 CNC turning centre" },
+      { image: jyoti, caption: "Jyoti DX 250 CNC turning centre" },
       { image: ratna, caption: "Ratna Sparking 7045 CNC EDM" },
       { image: fourthAxis1, caption: "4th axis hydraulic rotary table" },
       { image: powerGrip, caption: "Power grip tool clamping unit" },

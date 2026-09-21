@@ -6,6 +6,7 @@ import {
   vmcMachines,
   turningMachine,
   edmMachine,
+  verticalLatheMachine,
   rotaryTable,
   powerGripUnit,
 } from "../data/machinery";
@@ -39,10 +40,11 @@ export default function Infrastructure() {
           <h2 className="font-display font-bold text-2xl text-ink mb-8">
             Vertical Machining Centres
           </h2>
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid gap-6">
             {vmcMachines.map((machine) => (
               <MachineSpecCard key={machine.id} machine={machine} />
             ))}
+            <MachineSpecCard machine={verticalLatheMachine} />
           </div>
         </div>
       </section>
@@ -53,7 +55,7 @@ export default function Infrastructure() {
           <h2 className="font-display font-bold text-2xl text-ink mb-8">
             CNC Turning &amp; EDM Sparking
           </h2>
-          <div className="grid lg:grid-cols-2 gap-6">
+          <div className="grid gap-6">
             <MachineSpecCard machine={turningMachine} />
             <MachineSpecCard machine={edmMachine} />
           </div>
@@ -122,7 +124,7 @@ export default function Infrastructure() {
           <div className="grid sm:grid-cols-3 gap-6">
             {handlingEquipment.map((eq) => (
               <div key={eq.id} className="border border-steel-line bg-white">
-                <img src={eq.image} alt={eq.name} className="h-44 w-full object-contain bg-white p-4" loading="lazy" />
+                <img src={eq.image} alt={eq.name} className="h-44 w-full object-cover" loading="lazy" />
                 <div className="p-5 border-t border-steel-line">
                   <h3 className="font-display font-bold text-ink text-[15px]">{eq.name}</h3>
                   <p className="text-[13.5px] text-steel mt-1 font-data-num">{eq.capacity}</p>
@@ -142,7 +144,7 @@ export default function Infrastructure() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {measuringInstruments.map((inst) => (
               <div key={inst.id} className="border border-steel-line bg-white">
-                <img src={inst.image} alt={inst.name} className="h-40 w-full object-contain bg-white p-4" loading="lazy" />
+                <img src={inst.image} alt={inst.name} className="h-40 w-full object-cover" loading="lazy" />
                 <div className="p-5 border-t border-steel-line">
                   <h3 className="font-display font-bold text-ink text-[14px]">{inst.name}</h3>
                   <p className="text-[13px] text-steel mt-1">{inst.detail}</p>

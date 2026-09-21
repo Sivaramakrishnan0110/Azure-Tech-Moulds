@@ -6,7 +6,7 @@ import pressTool from "../assets/moulds/press-tool.jpg";
 export const mouldTypes = [
   {
     id: "aluminium-die-casting",
-    name: "Aluminium Die Casting Mould & Die",
+    name: "GDC Aluminium Die Casting",
     image: aluminium,
   },
   {

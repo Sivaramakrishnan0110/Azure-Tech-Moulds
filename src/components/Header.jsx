@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-paper/95 backdrop-blur border-b transition-shadow ${
+      className={`relative z-50 bg-paper/95 backdrop-blur border-b transition-shadow ${
         scrolled ? "border-steel-line shadow-[0_1px_0_0_rgba(0,0,0,0.04)]" : "border-transparent"
       }`}
     >

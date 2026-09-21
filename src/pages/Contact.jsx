@@ -6,7 +6,7 @@ import { company, businessHours } from "../data/company";
 
 export default function Contact() {
   const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(
-    company.mapQuery
+    company.addressShort
   )}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
 
   return (
