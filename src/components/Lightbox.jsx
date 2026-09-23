@@ -2,22 +2,30 @@ import { useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Lightbox({ items, index, onClose, onNav }) {
+  const open = index !== null;
+
   useEffect(() => {
+    if (!open) return undefined;
+
     const handler = (e) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowRight") onNav(1);
       if (e.key === "ArrowLeft") onNav(-1);
     };
+
     window.addEventListener("keydown", handler);
+    const prevOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+
     return () => {
       window.removeEventListener("keydown", handler);
-      document.body.style.overflow = "";
+      document.body.style.overflow = prevOverflow;
     };
-  }, [onClose, onNav]);
+  }, [open, onClose, onNav]);
 
-  if (index === null) return null;
+  if (!open) return null;
   const item = items[index];
+  if (!item) return null;
 
   return (
     <div

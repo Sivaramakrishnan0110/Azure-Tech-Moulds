@@ -15,7 +15,6 @@ import ratna from "../assets/machines/ratna-edm-7045.jpg";
 
 import fourthAxis1 from "../assets/equipment/4th-axis-1.jpg";
 import powerGrip from "../assets/equipment/power-grip-unit.jpg";
-import laserEngraving from "../assets/equipment/laser-engraving.jpg";
 
 export const galleryCategories = [
   {
@@ -43,7 +42,6 @@ export const galleryCategories = [
       { image: ratna, caption: "Ratna Sparking 7045 CNC EDM" },
       { image: fourthAxis1, caption: "4th axis hydraulic rotary table" },
       { image: powerGrip, caption: "Power grip tool clamping unit" },
-      { image: laserEngraving, caption: "Meera laser engraving machine" },
     ],
   },
 ];

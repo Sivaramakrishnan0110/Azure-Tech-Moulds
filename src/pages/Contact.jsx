@@ -78,8 +78,8 @@ export default function Contact() {
 function InfoRow({ icon: Icon, label, children }) {
   return (
     <div className="flex gap-4">
-      <div className="h-11 w-11 shrink-0 flex items-center justify-center bg-graphite text-white">
-        <Icon size={19} />
+      <div className="h-11 w-11 shrink-0 flex items-center justify-center border border-maroon/25 bg-maroon/10 text-maroon">
+        <Icon size={19} strokeWidth={2} className="text-maroon" />
       </div>
       <div>
         <p className="text-xs font-semibold uppercase tracking-wide text-steel">{label}</p>

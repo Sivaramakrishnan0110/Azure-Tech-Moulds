@@ -53,40 +53,40 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative w-full overflow-hidden bg-graphite">
-        <div className="relative w-full overflow-hidden">
+        <div className="relative min-h-[560px] sm:min-h-[480px] lg:min-h-[560px]">
           <img
             src={homeHero}
             alt="Precision CNC metal machining on a lathe"
-            className="block w-full h-auto max-w-none"
+            className="absolute inset-0 h-full w-full object-cover object-[68%_center] sm:object-center"
             decoding="async"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-graphite/75 via-graphite/45 to-graphite/80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-graphite/85 sm:from-graphite/75 via-graphite/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-graphite/80 via-graphite/55 to-graphite/90 sm:from-graphite/70 sm:via-graphite/40 sm:to-graphite/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-graphite/90 via-graphite/55 to-graphite/20 sm:from-graphite/80 sm:via-graphite/35 sm:to-transparent" />
 
-          <div className="absolute inset-0 mx-auto flex max-w-7xl items-start px-5 pt-10 sm:px-8 sm:pt-14 lg:pt-16">
+          <div className="relative z-10 mx-auto flex min-h-[560px] sm:min-h-[480px] lg:min-h-[560px] max-w-7xl items-end px-5 pb-12 pt-28 sm:px-8 sm:pb-16 sm:pt-20 lg:pb-20">
             <div className="max-w-xl text-white">
-              <p className="text-sm font-semibold tracking-wide text-maroon-bright uppercase mb-4">
+              <p className="text-[11px] sm:text-sm font-semibold tracking-wide text-maroon-bright uppercase mb-3 sm:mb-4">
                 Die &middot; Mould &middot; CNC Machined Components
               </p>
-              <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.06]">
+              <h1 className="font-display font-bold text-[1.85rem] leading-[1.12] sm:text-5xl lg:text-[3.4rem] sm:leading-[1.06]">
                 Precision tooling, built to run on the production floor.
               </h1>
-              <p className="mt-5 text-metal text-base sm:text-lg leading-relaxed max-w-lg">
+              <p className="mt-4 sm:mt-5 text-metal text-[14.5px] sm:text-lg leading-relaxed max-w-lg">
                 Azure Tech Moulds machines dies, moulds and CNC components for
                 automotive and industrial manufacturers from Ranipet, Tamil
                 Nadu &mdash; from raw drawing to inspected, ready-to-run tooling.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
+              <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
                 <Link
                   to="/contact"
-                  className="bg-maroon hover:bg-maroon-bright transition-colors text-white font-semibold px-7 py-4"
+                  className="bg-maroon hover:bg-maroon-bright transition-colors text-white font-semibold px-6 py-3.5 sm:px-7 sm:py-4 text-center"
                 >
                   Request a Quote
                 </Link>
                 <Link
                   to="/services"
-                  className="border border-white/40 hover:border-white transition-colors text-white font-semibold px-7 py-4"
+                  className="border border-white/40 hover:border-white transition-colors text-white font-semibold px-6 py-3.5 sm:px-7 sm:py-4 text-center"
                 >
                   Explore Services
                 </Link>

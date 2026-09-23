@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import SEO from "../components/SEO";
 import SectionTitle from "../components/SectionTitle";
 import Lightbox from "../components/Lightbox";
+import CTA from "../components/CTA";
 import { galleryCategories } from "../data/gallery";
 
 export default function Gallery() {
@@ -64,31 +65,28 @@ export default function Gallery() {
         </div>
       </section>
 
-      <section className="pb-20 sm:pb-28">
+      <section className="pb-16 sm:pb-24">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="overflow-x-auto pb-3">
-            <div className="flex min-w-max gap-5 snap-x snap-mandatory">
-              {visibleItems.map((item) => (
-                <button
-                  key={item.image}
-                  onClick={() => openAt(item)}
-                  className="group relative overflow-hidden border border-steel-line text-left snap-start shrink-0"
-                  style={{ width: "min(82vw, 320px)" }}
-                >
-                  <div className="image-frame h-64">
-                    <img
-                      src={item.image}
-                      alt={item.caption}
-                      loading="lazy"
-                      className="img-fit-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <span className="absolute inset-x-0 bottom-0 bg-graphite/85 text-white text-[13px] px-4 py-2.5">
-                    {item.caption}
-                  </span>
-                </button>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {visibleItems.map((item) => (
+              <button
+                key={item.image}
+                onClick={() => openAt(item)}
+                className="group relative overflow-hidden border border-steel-line text-left w-full"
+              >
+                <div className="image-frame aspect-[4/3]">
+                  <img
+                    src={item.image}
+                    alt={item.caption}
+                    loading="lazy"
+                    className="img-fit-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <span className="absolute inset-x-0 bottom-0 bg-graphite/85 text-white text-[13px] px-4 py-2.5">
+                  {item.caption}
+                </span>
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -98,6 +96,11 @@ export default function Gallery() {
         index={lightboxIndex}
         onClose={() => setLightboxIndex(null)}
         onNav={navigate}
+      />
+
+      <CTA
+        title="Want to see the shop floor for yourself?"
+        description="Share your drawings or schedule a visit — our team will walk you through the machines and capability that match your job."
       />
     </>
   );
