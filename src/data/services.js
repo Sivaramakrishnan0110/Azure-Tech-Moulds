@@ -1,6 +1,8 @@
-import jyotiDx250 from "../assets/machines/jyoti-dx200.jpg";
 import cncTurningBanner from "../assets/services/cnc-turning-banner.jpeg";
-import turningGraphic from "../assets/services/turning-graphic.jpg";
+import precisionMachinedPartsBanner from "../assets/services/precision-machined-parts-banner.jpg";
+import mouldDieBanner from "../assets/services/mould-die-banner.jpg";
+import mechanicalAssemblyBanner from "../assets/services/mechanical-assembly-banner.jpg";
+import pressToolAssemblyBanner from "../assets/services/press-tool-assembly-banner.jpg";
 import edmGraphic from "../assets/services/edm-graphic.jpg";
 import fourthAxisGraphic from "../assets/services/4th-axis-graphic.jpg";
 import diecastingGraphic from "../assets/services/diecasting-graphic.jpg";
@@ -20,7 +22,7 @@ export const services = [
     seoTitle: "Precision Machined Parts | CNC Turning, EDM & 4th Axis",
     metaDescription:
       "Precision machined parts using CNC turning, EDM sparking and 4th axis rotary machining for automotive, tooling and industrial components.",
-    heroImage: cncTurningBanner,
+    heroImage: precisionMachinedPartsBanner,
     summary:
       "CNC turning, CNC EDM sparking and 4th axis rotary machining for components across automotive, tooling and industrial applications.",
     intro: [
@@ -97,7 +99,7 @@ export const services = [
     seoTitle: "Mould and Die Manufacturing Services | Precision Tooling",
     metaDescription:
       "Mould and die manufacturing services for GDC aluminium die casting, automotive components, industrial parts and precision foundry pattern plates.",
-    heroImage: diecastingGraphic,
+    heroImage: mouldDieBanner,
     summary:
       "Custom moulds, dies, GDC aluminium die casting tooling and foundry pattern plates for automotive, industrial and casting applications.",
     intro: [
@@ -170,7 +172,7 @@ export const services = [
     seoTitle: "Mechanical Assembly Services | Tool & Sub-Assembly",
     metaDescription:
       "Mechanical sub-assembly and tool assembly services for machined components, die sets, fixtures, jigs and industrial mechanical assemblies.",
-    heroImage: subAssemblyGraphic,
+    heroImage: mechanicalAssemblyBanner,
     summary:
       "Turning individually machined components into complete, functional assemblies ready for line integration.",
     intro: [
@@ -228,7 +230,7 @@ export const services = [
     seoTitle: "Press Tool Assembly & Fabrication Services | Testing",
     metaDescription:
       "Press tool assembly, fabrication, alignment and trial testing for progressive, compound and single-operation sheet metal stamping tools.",
-    heroImage: pressToolFabGraphic,
+    heroImage: pressToolAssemblyBanner,
     summary:
       "Fabrication, assembly, alignment and trial testing for progressive, compound and single-operation press tools.",
     intro: [

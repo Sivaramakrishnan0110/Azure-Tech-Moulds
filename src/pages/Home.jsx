@@ -12,7 +12,7 @@ import ServiceCard from "../components/ServiceCard";
 import StatBand from "../components/StatBand";
 import TargetClients from "../components/TargetClients";
 import CTA from "../components/CTA";
-import homeHero from "../assets/brand/home-hero.jpeg";
+import homeHero from "../assets/brand/home-hero.jpg";
 import factoryExterior from "../assets/company/factory-exterior.jpg";
 import { company } from "../data/company";
 import { services } from "../data/services";
@@ -56,13 +56,15 @@ export default function Home() {
         <div className="relative w-full overflow-hidden">
           <img
             src={homeHero}
-            alt="STM VL1200 vertical machining centre"
+            alt="Precision CNC metal machining on a lathe"
             className="block w-full h-auto max-w-none"
+            decoding="async"
+            fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-graphite via-graphite/40 to-graphite/10" />
-          <div className="absolute inset-0 bg-gradient-to-r from-graphite/80 sm:from-graphite/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-graphite/75 via-graphite/45 to-graphite/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-graphite/85 sm:from-graphite/75 via-graphite/30 to-transparent" />
 
-          <div className="absolute inset-0 mx-auto flex max-w-7xl items-end px-5 pb-14 sm:px-8 sm:pb-20">
+          <div className="absolute inset-0 mx-auto flex max-w-7xl items-start px-5 pt-10 sm:px-8 sm:pt-14 lg:pt-16">
             <div className="max-w-xl text-white">
               <p className="text-sm font-semibold tracking-wide text-maroon-bright uppercase mb-4">
                 Die &middot; Mould &middot; CNC Machined Components

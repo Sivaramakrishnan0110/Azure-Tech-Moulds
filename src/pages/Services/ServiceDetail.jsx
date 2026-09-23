@@ -16,28 +16,17 @@ export default function ServiceDetail() {
     <>
       <SEO title={service.seoTitle} description={service.metaDescription} />
 
-      {/* Hero */}
-      <section className="relative">
-        <div className="relative aspect-[16/8] min-h-[320px] max-h-[520px] overflow-hidden sm:aspect-[16/7]">
+      {/* Hero — banners include title/tagline artwork */}
+      <section className="relative bg-[#0a1628]">
+        <div className="relative w-full overflow-hidden">
           <img
             src={service.heroImage}
             alt={service.navLabel}
-            className="absolute inset-0 h-full w-full object-contain bg-[#efeae3]"
+            className="block w-full h-auto"
+            decoding="async"
+            fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-graphite via-graphite/50 to-graphite/10" />
-          <div className="relative h-full mx-auto max-w-7xl px-5 sm:px-8 flex items-end pb-12">
-            <div className="max-w-2xl text-white">
-              <p className="text-xs font-semibold tracking-wide text-maroon-bright uppercase mb-3">
-                Service
-              </p>
-              <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl leading-tight">
-                {service.navLabel}
-              </h1>
-              <p className="mt-4 text-metal text-base sm:text-lg max-w-xl">
-                {service.summary}
-              </p>
-            </div>
-          </div>
+          <h1 className="sr-only">{service.navLabel}</h1>
         </div>
       </section>
 
