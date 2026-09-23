@@ -1,4 +1,5 @@
 import jyotiDx250 from "../assets/machines/jyoti-dx200.jpg";
+import cncTurningBanner from "../assets/services/cnc-turning-banner.jpeg";
 import turningGraphic from "../assets/services/turning-graphic.jpg";
 import edmGraphic from "../assets/services/edm-graphic.jpg";
 import fourthAxisGraphic from "../assets/services/4th-axis-graphic.jpg";
@@ -19,7 +20,7 @@ export const services = [
     seoTitle: "Precision Machined Parts | CNC Turning, EDM & 4th Axis",
     metaDescription:
       "Precision machined parts using CNC turning, EDM sparking and 4th axis rotary machining for automotive, tooling and industrial components.",
-    heroImage: jyotiDx250,
+    heroImage: cncTurningBanner,
     summary:
       "CNC turning, CNC EDM sparking and 4th axis rotary machining for components across automotive, tooling and industrial applications.",
     intro: [
@@ -42,7 +43,7 @@ export const services = [
       {
         heading: "CNC Turning \u2013 Precision Cylindrical Machining",
         body: "Our CNC turning is suited to cylindrical and rotationally symmetric metal components. The Jyoti DX 250 CNC Turning Center provides a maximum turning diameter of \u00d8365 mm and spindle speeds up to 4000 RPM \u2013 suitable for components that need consistent dimensions and repeatable machining across shafts, bushings, flanges, pins, sleeves and other rotationally symmetric parts.",
-        image: jyotiDx250,
+        image: cncTurningBanner,
       },
       {
         heading: "CNC Sparking & EDM \u2013 Precision Cavity Sinking",

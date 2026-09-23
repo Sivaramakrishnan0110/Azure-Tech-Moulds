@@ -75,12 +75,14 @@ export default function Gallery() {
                   className="group relative overflow-hidden border border-steel-line text-left snap-start shrink-0"
                   style={{ width: "min(82vw, 320px)" }}
                 >
-                  <img
-                    src={item.image}
-                    alt={item.caption}
-                    loading="lazy"
-                    className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  <div className="image-frame h-64">
+                    <img
+                      src={item.image}
+                      alt={item.caption}
+                      loading="lazy"
+                      className="img-fit-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                   <span className="absolute inset-x-0 bottom-0 bg-graphite/85 text-white text-[13px] px-4 py-2.5">
                     {item.caption}
                   </span>

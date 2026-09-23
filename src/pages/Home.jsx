@@ -52,17 +52,17 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="relative bg-graphite">
-        <div className="relative h-[78vh] min-h-[560px] max-h-[820px] overflow-hidden">
+      <section className="relative w-full overflow-hidden bg-graphite">
+        <div className="relative w-full overflow-hidden">
           <img
             src={homeHero}
             alt="STM VL1200 vertical machining centre"
-            className="absolute inset-0 h-full w-full object-cover object-[60%_35%]"
+            className="block w-full h-auto max-w-none"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-graphite via-graphite/40 to-graphite/10" />
           <div className="absolute inset-0 bg-gradient-to-r from-graphite/80 sm:from-graphite/70 via-transparent to-transparent" />
 
-          <div className="relative h-full mx-auto max-w-7xl px-5 sm:px-8 flex items-end pb-14 sm:pb-20">
+          <div className="absolute inset-0 mx-auto flex max-w-7xl items-end px-5 pb-14 sm:px-8 sm:pb-20">
             <div className="max-w-xl text-white">
               <p className="text-sm font-semibold tracking-wide text-maroon-bright uppercase mb-4">
                 Die &middot; Mould &middot; CNC Machined Components
@@ -98,12 +98,14 @@ export default function Home() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
           <div className="bracket-frame">
-            <img
-              src={factoryExterior}
-              alt="Azure Tech Moulds factory building at Sri Venkateswara Industrial Complex"
-              className="w-full h-[420px] object-cover"
-              loading="lazy"
-            />
+            <div className="image-frame aspect-[4/3]">
+              <img
+                src={factoryExterior}
+                alt="Azure Tech Moulds factory building at Sri Venkateswara Industrial Complex"
+                className="img-fit-contain"
+                loading="lazy"
+              />
+            </div>
           </div>
           <div>
             <SectionTitle
@@ -196,12 +198,14 @@ export default function Home() {
           <div className="grid sm:grid-cols-3 gap-6">
             {machinePreview.map((m) => (
               <div key={m.id} className="border border-steel-line bg-white">
-                <img
-                  src={m.image}
-                  alt={m.name}
-                  className="h-52 w-full object-cover"
-                  loading="lazy"
-                />
+                <div className="image-frame aspect-[4/3]">
+                  <img
+                    src={m.image}
+                    alt={m.name}
+                    className="img-fit-contain"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="p-5">
                   <p className="text-xs font-semibold text-maroon uppercase tracking-wide">
                     {m.category}

@@ -18,11 +18,11 @@ export default function ServiceDetail() {
 
       {/* Hero */}
       <section className="relative">
-        <div className="relative h-[46vh] min-h-[340px] max-h-[520px] overflow-hidden">
+        <div className="relative aspect-[16/8] min-h-[320px] max-h-[520px] overflow-hidden sm:aspect-[16/7]">
           <img
             src={service.heroImage}
             alt={service.navLabel}
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-contain bg-[#efeae3]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-graphite via-graphite/50 to-graphite/10" />
           <div className="relative h-full mx-auto max-w-7xl px-5 sm:px-8 flex items-end pb-12">
@@ -72,12 +72,14 @@ export default function ServiceDetail() {
         <section key={section.heading} className={i % 2 === 1 ? "bg-paper-dim" : ""}>
           <div className="py-16 sm:py-20 mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-10 items-center">
             <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-              <img
-                src={section.image}
-                alt={section.heading}
-                className="w-full h-80 object-cover"
-                loading="lazy"
-              />
+              <div className="image-frame aspect-[4/3] bg-[#efeae3]">
+                <img
+                  src={section.image}
+                  alt={section.heading}
+                  className="img-fit-contain"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className={i % 2 === 1 ? "lg:order-1" : ""}>
               <h2 className="font-display font-bold text-2xl sm:text-3xl text-ink leading-tight">
@@ -99,7 +101,9 @@ export default function ServiceDetail() {
             <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {mouldTypes.map((type) => (
                 <div key={type.id} className="border border-steel-line bg-white">
-                  <img src={type.image} alt={type.name} className="h-44 w-full object-cover" loading="lazy" />
+                  <div className="image-frame aspect-[4/3]">
+                <img src={type.image} alt={type.name} className="img-fit-contain" loading="lazy" />
+              </div>
                   <p className="p-4 font-medium text-sm text-ink">{type.name}</p>
                 </div>
               ))}

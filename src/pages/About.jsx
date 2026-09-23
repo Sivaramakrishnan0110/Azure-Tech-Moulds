@@ -38,24 +38,30 @@ export default function About() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img
-              src={factoryExterior}
-              alt="Factory building exterior"
-              className="col-span-2 h-56 w-full object-cover"
-              loading="lazy"
-            />
-            <img
-              src={office1}
-              alt="Engineering office"
-              className="h-40 w-full object-cover"
-              loading="lazy"
-            />
-            <img
-              src={office2}
-              alt="Front office"
-              className="h-40 w-full object-cover"
-              loading="lazy"
-            />
+            <div className="col-span-2 image-frame aspect-[16/9]">
+              <img
+                src={factoryExterior}
+                alt="Factory building exterior"
+                className="img-fit-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="image-frame aspect-[4/3]">
+              <img
+                src={office1}
+                alt="Engineering office"
+                className="img-fit-contain"
+                loading="lazy"
+              />
+            </div>
+            <div className="image-frame aspect-[4/3]">
+              <img
+                src={office2}
+                alt="Front office"
+                className="img-fit-contain"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>

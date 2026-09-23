@@ -104,7 +104,9 @@ export default function Infrastructure() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {supportEquipment.map((eq) => (
               <div key={eq.id} className="border border-steel-line bg-white">
-                <img src={eq.image} alt={eq.name} className="h-48 w-full object-cover" loading="lazy" />
+                <div className="image-frame aspect-[4/3]">
+                  <img src={eq.image} alt={eq.name} className="img-fit-contain" loading="lazy" />
+                </div>
                 <div className="p-5">
                   <h3 className="font-display font-bold text-ink text-[15px]">{eq.name}</h3>
                   <p className="text-[13.5px] text-steel mt-1.5 leading-relaxed">{eq.blurb}</p>
@@ -124,7 +126,9 @@ export default function Infrastructure() {
           <div className="grid sm:grid-cols-3 gap-6">
             {handlingEquipment.map((eq) => (
               <div key={eq.id} className="border border-steel-line bg-white">
-                <img src={eq.image} alt={eq.name} className="h-44 w-full object-cover" loading="lazy" />
+                <div className="image-frame aspect-[4/3]">
+                  <img src={eq.image} alt={eq.name} className="img-fit-contain" loading="lazy" />
+                </div>
                 <div className="p-5 border-t border-steel-line">
                   <h3 className="font-display font-bold text-ink text-[15px]">{eq.name}</h3>
                   <p className="text-[13.5px] text-steel mt-1 font-data-num">{eq.capacity}</p>
@@ -144,7 +148,9 @@ export default function Infrastructure() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {measuringInstruments.map((inst) => (
               <div key={inst.id} className="border border-steel-line bg-white">
-                <img src={inst.image} alt={inst.name} className="h-40 w-full object-cover" loading="lazy" />
+                <div className="image-frame aspect-[4/3]">
+                  <img src={inst.image} alt={inst.name} className="img-fit-contain" loading="lazy" />
+                </div>
                 <div className="p-5 border-t border-steel-line">
                   <h3 className="font-display font-bold text-ink text-[14px]">{inst.name}</h3>
                   <p className="text-[13px] text-steel mt-1">{inst.detail}</p>

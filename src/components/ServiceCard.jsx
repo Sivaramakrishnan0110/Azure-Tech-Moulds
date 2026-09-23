@@ -6,12 +6,12 @@ export default function ServiceCard({ service }) {
       to={`/services/${service.slug}`}
       className="group flex flex-col border border-steel-line bg-white hover:border-maroon transition-colors"
     >
-      <div className="relative h-56 overflow-hidden">
+      <div className="image-frame aspect-[4/3] overflow-hidden">
         <img
           src={service.heroImage}
           alt={service.navLabel}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          className="img-fit-contain transition-transform duration-500 group-hover:scale-[1.04]"
         />
       </div>
       <div className="p-6 flex flex-col gap-3 flex-1 border-t border-steel-line">

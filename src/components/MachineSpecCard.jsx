@@ -3,12 +3,14 @@ export default function MachineSpecCard({ machine }) {
     <div className="border border-steel-line bg-white flex flex-col md:flex-row">
       {machine.image && (
         <div className="md:w-2/5 bracket-frame shrink-0">
-          <img
-            src={machine.image}
-            alt={machine.name}
-            loading="lazy"
-            className="h-56 md:h-full w-full object-cover"
-          />
+          <div className="image-frame h-64 md:h-full md:min-h-[260px]">
+            <img
+              src={machine.image}
+              alt={machine.name}
+              loading="lazy"
+              className="img-fit-contain"
+            />
+          </div>
         </div>
       )}
       <div className="flex-1 p-6 sm:p-7 flex flex-col gap-4">
