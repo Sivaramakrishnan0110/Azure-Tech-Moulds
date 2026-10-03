@@ -19,6 +19,15 @@
   --font-data: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
+:root {
+  /* Matches site paper so white source-image margins blend into frames */
+  --image-bg: #f1efea;
+  --image-bg-dim: #e7e2d9;
+  --image-banner-bg: #0a1628;
+  --image-inset: 6%;
+  --image-inset-tight: 2%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -64,28 +73,112 @@ h1, h2, h3, h4, .font-display {
   background-color: var(--color-steel-line);
 }
 
+/* ── Reusable image frame system ───────────────────────────────
+   Product/machine images: contain + blended paper background.
+   Banner images: dark frame, full graphic visible.
+   Cover: intentional full-bleed crops (hero/atmosphere only).
+*/
 .image-frame {
-  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   overflow: hidden;
+  background: var(--image-bg);
 }
 
-.image-frame img,
+.image-frame--product,
+.image-frame--machine,
+.image-frame--gallery {
+  background: var(--image-bg);
+}
+
+.image-frame--dim {
+  background: var(--image-bg-dim);
+}
+
+.image-frame--banner {
+  background: var(--image-banner-bg);
+}
+
+.image-frame--cover {
+  background: var(--color-graphite);
+}
+
+.image-frame__img,
+.image-frame > img,
 .img-fit-contain,
 .img-fit-cover {
   display: block;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
+/* Default / product / machine / gallery: show entire object */
+.image-frame__img,
+.image-frame > img,
 .img-fit-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  box-sizing: border-box;
+  padding: var(--image-inset);
+}
+
+.image-frame--product > img,
+.image-frame--product .image-frame__img,
+.image-frame--machine > img,
+.image-frame--machine .image-frame__img,
+.image-frame--gallery > img,
+.image-frame--gallery .image-frame__img {
+  padding: var(--image-inset);
   object-fit: contain;
   object-position: center;
 }
 
+/* Source photos with large empty margins — fill more of the frame */
+.image-frame--tight > img,
+.image-frame--tight .image-frame__img {
+  padding: var(--image-inset-tight);
+  transform: scale(1.06);
+  transform-origin: center;
+}
+
+/* Designed service banners: full graphic, no white paper box */
+.image-frame--banner > img,
+.image-frame--banner .image-frame__img {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
+/* Intentional cover crops (hero / atmospheric only) */
+.image-frame--cover > img,
+.image-frame--cover .image-frame__img,
 .img-fit-cover {
+  padding: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --image-inset: 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --image-inset: 4%;
+  }
 }
 
 .bracket-frame {

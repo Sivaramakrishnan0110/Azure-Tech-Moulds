@@ -12,6 +12,7 @@ import ServiceCard from "../components/ServiceCard";
 import StatBand from "../components/StatBand";
 import TargetClients from "../components/TargetClients";
 import CTA from "../components/CTA";
+import ImageFrame from "../components/ImageFrame";
 import homeHero from "../assets/brand/home-hero.jpg";
 import factoryExterior from "../assets/company/factory-exterior.jpg";
 import { company } from "../data/company";
@@ -100,14 +101,12 @@ export default function Home() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-12 items-center">
           <div className="bracket-frame">
-            <div className="image-frame aspect-[4/3]">
-              <img
-                src={factoryExterior}
-                alt="Azure Tech Moulds factory building at Sri Venkateswara Industrial Complex"
-                className="img-fit-contain"
-                loading="lazy"
-              />
-            </div>
+            <ImageFrame
+              src={factoryExterior}
+              alt="Azure Tech Moulds factory building at Sri Venkateswara Industrial Complex"
+              variant="product"
+              aspectClass="aspect-[4/3]"
+            />
           </div>
           <div>
             <SectionTitle
@@ -200,14 +199,13 @@ export default function Home() {
           <div className="grid sm:grid-cols-3 gap-6">
             {machinePreview.map((m) => (
               <div key={m.id} className="border border-steel-line bg-white">
-                <div className="image-frame aspect-[4/3]">
-                  <img
-                    src={m.image}
-                    alt={m.name}
-                    className="img-fit-contain"
-                    loading="lazy"
-                  />
-                </div>
+                <ImageFrame
+                  src={m.image}
+                  alt={m.name}
+                  variant="machine"
+                  aspectClass="aspect-[4/3]"
+                />
+
                 <div className="p-5">
                   <p className="text-xs font-semibold text-maroon uppercase tracking-wide">
                     {m.category}

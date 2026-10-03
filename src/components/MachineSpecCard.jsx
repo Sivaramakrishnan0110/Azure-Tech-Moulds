@@ -1,16 +1,16 @@
+import ImageFrame from "./ImageFrame";
+
 export default function MachineSpecCard({ machine }) {
   return (
     <div className="border border-steel-line bg-white flex flex-col md:flex-row">
       {machine.image && (
         <div className="md:w-2/5 bracket-frame shrink-0">
-          <div className="image-frame h-64 md:h-full md:min-h-[260px]">
-            <img
-              src={machine.image}
-              alt={machine.name}
-              loading="lazy"
-              className="img-fit-contain"
-            />
-          </div>
+          <ImageFrame
+            src={machine.image}
+            alt={machine.name}
+            variant="machine"
+            className="h-64 md:h-full md:min-h-[260px]"
+          />
         </div>
       )}
       <div className="flex-1 p-6 sm:p-7 flex flex-col gap-4">

@@ -3,6 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import SEO from "../../components/SEO";
 import SectionTitle from "../../components/SectionTitle";
 import CTA from "../../components/CTA";
+import ImageFrame from "../../components/ImageFrame";
 import { getServiceBySlug, services } from "../../data/services";
 import { mouldTypes } from "../../data/mouldTypes";
 
@@ -61,14 +62,13 @@ export default function ServiceDetail() {
         <section key={section.heading} className={i % 2 === 1 ? "bg-paper-dim" : ""}>
           <div className="py-16 sm:py-20 mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-2 gap-10 items-center">
             <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-              <div className="image-frame aspect-[4/3] bg-[#efeae3]">
-                <img
-                  src={section.image}
-                  alt={section.heading}
-                  className="img-fit-contain"
-                  loading="lazy"
-                />
-              </div>
+              <ImageFrame
+                src={section.image}
+                alt={section.heading}
+                variant="product"
+                tight={Boolean(section.imageTight)}
+                aspectClass="aspect-[4/3]"
+              />
             </div>
             <div className={i % 2 === 1 ? "lg:order-1" : ""}>
               <h2 className="font-display font-bold text-2xl sm:text-3xl text-ink leading-tight">
@@ -90,9 +90,12 @@ export default function ServiceDetail() {
             <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {mouldTypes.map((type) => (
                 <div key={type.id} className="border border-steel-line bg-white">
-                  <div className="image-frame aspect-[4/3]">
-                <img src={type.image} alt={type.name} className="img-fit-contain" loading="lazy" />
-              </div>
+                  <ImageFrame
+                    src={type.image}
+                    alt={type.name}
+                    variant="product"
+                    aspectClass="aspect-[4/3]"
+                  />
                   <p className="p-4 font-medium text-sm text-ink">{type.name}</p>
                 </div>
               ))}

@@ -1,6 +1,7 @@
 import SEO from "../components/SEO";
 import SectionTitle from "../components/SectionTitle";
 import MachineSpecCard from "../components/MachineSpecCard";
+import ImageFrame from "../components/ImageFrame";
 import CTA from "../components/CTA";
 import {
   vmcMachines,
@@ -104,9 +105,13 @@ export default function Infrastructure() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {supportEquipment.map((eq) => (
               <div key={eq.id} className="border border-steel-line bg-white">
-                <div className="image-frame aspect-[4/3]">
-                  <img src={eq.image} alt={eq.name} className="img-fit-contain" loading="lazy" />
-                </div>
+                <ImageFrame
+                  src={eq.image}
+                  alt={eq.name}
+                  variant="machine"
+                  tight={eq.id === "4th-axis"}
+                  aspectClass="aspect-[4/3]"
+                />
                 <div className="p-5">
                   <h3 className="font-display font-bold text-ink text-[15px]">{eq.name}</h3>
                   <p className="text-[13.5px] text-steel mt-1.5 leading-relaxed">{eq.blurb}</p>
@@ -126,9 +131,12 @@ export default function Infrastructure() {
           <div className="grid sm:grid-cols-3 gap-6">
             {handlingEquipment.map((eq) => (
               <div key={eq.id} className="border border-steel-line bg-white">
-                <div className="image-frame aspect-[4/3]">
-                  <img src={eq.image} alt={eq.name} className="img-fit-contain" loading="lazy" />
-                </div>
+                <ImageFrame
+                  src={eq.image}
+                  alt={eq.name}
+                  variant="machine"
+                  aspectClass="aspect-[4/3]"
+                />
                 <div className="p-5 border-t border-steel-line">
                   <h3 className="font-display font-bold text-ink text-[15px]">{eq.name}</h3>
                   <p className="text-[13.5px] text-steel mt-1 font-data-num">{eq.capacity}</p>
@@ -148,9 +156,12 @@ export default function Infrastructure() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {measuringInstruments.map((inst) => (
               <div key={inst.id} className="border border-steel-line bg-white">
-                <div className="image-frame aspect-[4/3]">
-                  <img src={inst.image} alt={inst.name} className="img-fit-contain" loading="lazy" />
-                </div>
+                <ImageFrame
+                  src={inst.image}
+                  alt={inst.name}
+                  variant="product"
+                  aspectClass="aspect-[4/3]"
+                />
                 <div className="p-5 border-t border-steel-line">
                   <h3 className="font-display font-bold text-ink text-[14px]">{inst.name}</h3>
                   <p className="text-[13px] text-steel mt-1">{inst.detail}</p>

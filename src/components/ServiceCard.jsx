@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import ImageFrame from "./ImageFrame";
 
 export default function ServiceCard({ service }) {
   return (
@@ -6,15 +7,13 @@ export default function ServiceCard({ service }) {
       to={`/services/${service.slug}`}
       className="group flex flex-col border border-steel-line bg-white hover:border-maroon transition-colors"
     >
-      <div className="image-frame aspect-[16/7] overflow-hidden bg-[#0a1628]">
-        <img
-          src={service.heroImage}
-          alt={service.navLabel}
-          loading="lazy"
-          decoding="async"
-          className="img-fit-contain transition-transform duration-500 group-hover:scale-[1.03]"
-        />
-      </div>
+      <ImageFrame
+        src={service.heroImage}
+        alt={service.navLabel}
+        variant="banner"
+        aspectClass="aspect-[16/7]"
+        imgClassName="transition-transform duration-500 group-hover:scale-[1.03]"
+      />
       <div className="p-6 flex flex-col gap-3 flex-1 border-t border-steel-line">
         <h3 className="font-display font-bold text-xl text-ink leading-snug group-hover:text-maroon transition-colors">
           {service.navLabel}

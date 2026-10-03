@@ -3,6 +3,7 @@ import SEO from "../components/SEO";
 import SectionTitle from "../components/SectionTitle";
 import Lightbox from "../components/Lightbox";
 import CTA from "../components/CTA";
+import ImageFrame from "../components/ImageFrame";
 import { galleryCategories } from "../data/gallery";
 
 export default function Gallery() {
@@ -74,14 +75,13 @@ export default function Gallery() {
                 onClick={() => openAt(item)}
                 className="group relative overflow-hidden border border-steel-line text-left w-full"
               >
-                <div className="image-frame aspect-[4/3]">
-                  <img
-                    src={item.image}
-                    alt={item.caption}
-                    loading="lazy"
-                    className="img-fit-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
+                <ImageFrame
+                  src={item.image}
+                  alt={item.caption}
+                  variant="gallery"
+                  aspectClass="aspect-[4/3]"
+                  imgClassName="transition-transform duration-500 group-hover:scale-105"
+                />
                 <span className="absolute inset-x-0 bottom-0 bg-graphite/85 text-white text-[13px] px-4 py-2.5">
                   {item.caption}
                 </span>

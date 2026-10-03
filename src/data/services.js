@@ -56,6 +56,7 @@ export const services = [
         heading: "4th Axis Rotary Table Machining",
         body: "4th axis rotary machining lets components be indexed and machined across multiple faces and angular orientations in a single setup. Our Model-GXA 320H hydraulic clamping rotary table provides rigid workholding, cutting cumulative setup error and preserving true-position and concentricity for multi-face blocks, manifold housings, angular brackets and indexing plates.",
         image: fourthAxisGraphic,
+        imageTight: true,
       },
     ],
     applications: [

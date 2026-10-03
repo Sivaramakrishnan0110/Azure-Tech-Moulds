@@ -2,6 +2,7 @@ import SEO from "../components/SEO";
 import SectionTitle from "../components/SectionTitle";
 import ProcessChart from "../components/ProcessChart";
 import CTA from "../components/CTA";
+import ImageFrame from "../components/ImageFrame";
 import { certifications } from "../data/certifications";
 import {
   company,
@@ -38,30 +39,24 @@ export default function About() {
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <div className="col-span-2 image-frame aspect-[16/9]">
-              <img
-                src={factoryExterior}
-                alt="Factory building exterior"
-                className="img-fit-contain"
-                loading="lazy"
-              />
-            </div>
-            <div className="image-frame aspect-[4/3]">
-              <img
-                src={office1}
-                alt="Engineering office"
-                className="img-fit-contain"
-                loading="lazy"
-              />
-            </div>
-            <div className="image-frame aspect-[4/3]">
-              <img
-                src={office2}
-                alt="Front office"
-                className="img-fit-contain"
-                loading="lazy"
-              />
-            </div>
+            <ImageFrame
+              src={factoryExterior}
+              alt="Factory building exterior"
+              variant="product"
+              aspectClass="aspect-[16/9] col-span-2"
+            />
+            <ImageFrame
+              src={office1}
+              alt="Engineering office"
+              variant="product"
+              aspectClass="aspect-[4/3]"
+            />
+            <ImageFrame
+              src={office2}
+              alt="Front office"
+              variant="product"
+              aspectClass="aspect-[4/3]"
+            />
           </div>
         </div>
       </section>
