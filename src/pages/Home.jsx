@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  ShieldCheck,
   Timer,
   Settings2,
   Award,
@@ -34,11 +33,6 @@ const whyChooseUs = [
     icon: Timer,
     title: "48-Hour Response",
     body: "Every enquiry is reviewed and answered within 48 hours, with development starting on quotation approval.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "TAGMA India Member",
-    body: "Registered with the Tool and Gauge Manufacturers Association of India, the national body for the tooling industry.",
   },
 ];
 
@@ -167,7 +161,7 @@ export default function Home() {
             title="Why manufacturers work with us"
             description="Advantages built into how the shop actually runs, not marketing claims."
           />
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-steel-line border border-steel-line">
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-steel-line border border-steel-line">
             {whyChooseUs.map(({ icon: Icon, title, body }) => (
               <div key={title} className="bg-white p-7 flex flex-col gap-4">
                 <Icon size={26} strokeWidth={1.5} className="text-maroon" />
